@@ -274,3 +274,28 @@ button { color: inherit; }
     url("/chat-wallpaper.png") center / cover no-repeat;
   background-attachment: local;
 }
+
+/* Chat wallpaper - desktop and mobile fix */
+#messages,
+.messages {
+  background-image:
+    linear-gradient(
+      rgba(10, 8, 24, 0.48),
+      rgba(10, 8, 24, 0.48)
+    ),
+    url("/chat-wallpaper.png") !important;
+
+  background-position: center center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-attachment: scroll !important;
+}
+
+@media screen and (max-width: 768px) {
+  #messages,
+  .messages {
+    background-attachment: scroll !important;
+    background-position: center top !important;
+    background-size: cover !important;
+  }
+}
