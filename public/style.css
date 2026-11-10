@@ -265,3 +265,12 @@ button { color: inherit; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: .01ms !important; }
 }
+#messages {
+  background:
+    linear-gradient(
+      rgba(10, 8, 24, 0.48),
+      rgba(10, 8, 24, 0.48)
+    ),
+    url("/chat-wallpaper.png") center / cover no-repeat;
+  background-attachment: local;
+}
