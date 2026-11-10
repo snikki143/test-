@@ -1,0 +1,7 @@
+# Private chat history and sign-in data: never commit these
+data.json
+data.json.tmp
+*.log
+node_modules/
+.env
+.DS_Store
