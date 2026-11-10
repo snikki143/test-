@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content">
+  <meta name="theme-color" content="#0b0a12">
+  <meta name="description" content="A quieter, more personal space for private conversations.">
+  <title>Our Chat</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+
+  <!-- Sign in -->
+  <main id="login" class="screen hidden">
+    <div class="auth-layout">
+      <section class="auth-story" aria-label="About Our Chat">
+        <div class="brand-lockup">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none">
+              <path d="M10 13.5A5.5 5.5 0 0 1 15.5 8h17a5.5 5.5 0 0 1 5.5 5.5v13a5.5 5.5 0 0 1-5.5 5.5H22l-9.5 7v-7h-1A5.5 5.5 0 0 1 6 26.5v-13Z" fill="currentColor" opacity=".96"/>
+              <circle cx="17" cy="20" r="1.8" fill="#171225"/>
+              <circle cx="24" cy="20" r="1.8" fill="#171225"/>
+              <circle cx="31" cy="20" r="1.8" fill="#171225"/>
+            </svg>
+          </span>
+          <span class="brand-name">our<span>chat</span></span>
+        </div>
+
+        <div class="story-copy">
+          <div class="eyebrow"><span class="eyebrow-dot"></span> A SPACE OF YOUR OWN</div>
+          <h1>Keep the moments.<br><span>Lose the noise.</span></h1>
+          <p>A little corner of the internet for conversations that matter. No feeds, no crowds — just the people you choose.</p>
+          <div class="story-points">
+            <div class="story-point">
+              <span class="point-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M12 3 5 6v5c0 4.5 2.9 8.2 7 10 4.1-1.8 7-5.5 7-10V6l-7-3Z"/><path d="m9 12 2 2 4-4"/></svg>
+              </span>
+              <span><strong>Room protected</strong><small>Access with your shared room details</small></span>
+            </div>
+            <div class="story-point">
+              <span class="point-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M4 12h3l2-6 4 12 2-6h5"/></svg>
+              </span>
+              <span><strong>Here, as it happens</strong><small>Messages arrive in real time</small></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="story-footer">
+          <span class="footer-orbit" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span>MADE FOR MEANINGFUL MOMENTS</span>
+          <span class="footer-version">A QUIETER KIND OF CHAT</span>
+        </div>
+        <div class="story-orb" aria-hidden="true"></div>
+      </section>
+
+      <section class="auth-main">
+        <form id="loginForm" class="card" autocomplete="off">
+          <div class="mobile-brand brand-lockup">
+            <span class="brand-mark" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none"><path d="M10 13.5A5.5 5.5 0 0 1 15.5 8h17a5.5 5.5 0 0 1 5.5 5.5v13a5.5 5.5 0 0 1-5.5 5.5H22l-9.5 7v-7h-1A5.5 5.5 0 0 1 6 26.5v-13Z" fill="currentColor"/><circle cx="17" cy="20" r="1.8" fill="#171225"/><circle cx="24" cy="20" r="1.8" fill="#171225"/><circle cx="31" cy="20" r="1.8" fill="#171225"/></svg>
+            </span>
+            <span class="brand-name">our<span>chat</span></span>
+          </div>
+
+          <div class="form-heading">
+            <div class="eyebrow">WELCOME TO YOUR SPACE</div>
+            <h2>Come on in.</h2>
+            <p>Enter your details to open your private room.</p>
+          </div>
+
+          <div class="field-group">
+            <label for="name">Your name</label>
+            <div class="field-wrap">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c.7-3.2 3.1-5 7-5s6.3 1.8 7 5"/></svg>
+              <input id="name" maxlength="24" required autocapitalize="words" placeholder="What should we call you?">
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label for="room">Room name</label>
+            <div class="field-wrap">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7.5A2.5 2.5 0 0 1 6.5 5h11A2.5 2.5 0 0 1 20 7.5v9a2.5 2.5 0 0 1-2.5 2.5h-11A2.5 2.5 0 0 1 4 16.5v-9Z"/><path d="M8 9h8M8 13h5"/></svg>
+              <input id="room" maxlength="40" required autocapitalize="off" placeholder="Give your room a name">
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label for="password">Room password</label>
+            <div class="field-wrap">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10" width="14" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3M12 14v2"/></svg>
+              <input id="password" type="password" minlength="6" maxlength="100" required placeholder="At least 6 characters" autocomplete="current-password">
+            </div>
+            <small class="field-hint">Use the same room name and password as the other person.</small>
+          </div>
+
+          <button type="submit" id="joinBtn" class="primary">
+            <span>Enter your room</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+          </button>
+          <p id="loginError" class="error" role="alert"></p>
+          <div class="form-foot"><span class="mini-lock" aria-hidden="true">⌑</span> Your room is only for the people you invite.</div>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <!-- Conversation -->
+  <section id="chat" class="chat hidden">
+    <div class="chat-frame">
+      <aside class="side-panel" aria-label="Chat information">
+        <div class="brand-lockup sidebar-brand">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none"><path d="M10 13.5A5.5 5.5 0 0 1 15.5 8h17a5.5 5.5 0 0 1 5.5 5.5v13a5.5 5.5 0 0 1-5.5 5.5H22l-9.5 7v-7h-1A5.5 5.5 0 0 1 6 26.5v-13Z" fill="currentColor"/><circle cx="17" cy="20" r="1.8" fill="#171225"/><circle cx="24" cy="20" r="1.8" fill="#171225"/><circle cx="31" cy="20" r="1.8" fill="#171225"/></svg>
+          </span>
+          <span class="brand-name">our<span>chat</span></span>
+        </div>
+
+        <div class="sidebar-section-label">YOUR SPACE</div>
+        <div class="room-tile">
+          <span class="room-tile-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M4 7.5A2.5 2.5 0 0 1 6.5 5h11A2.5 2.5 0 0 1 20 7.5v9a2.5 2.5 0 0 1-2.5 2.5h-11A2.5 2.5 0 0 1 4 16.5v-9Z"/><path d="M8 9h8M8 13h5"/></svg>
+          </span>
+          <span class="room-tile-copy"><strong>Private room</strong><small>Your personal conversation</small></span>
+          <span class="room-live-dot" aria-label="Room active"></span>
+        </div>
+
+        <div class="sidebar-bottom">
+          <div class="privacy-card">
+            <span class="privacy-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M12 3 5 6v5c0 4.5 2.9 8.2 7 10 4.1-1.8 7-5.5 7-10V6l-7-3Z"/><path d="m9 12 2 2 4-4"/></svg>
+            </span>
+            <strong>A space that feels personal.</strong>
+            <p>Your room is protected by its shared sign-in details. Keep them between you.</p>
+          </div>
+          <div class="sidebar-note"><span class="note-dot"></span> A QUIETER KIND OF CHAT</div>
+        </div>
+      </aside>
+
+      <main class="conversation-panel">
+        <header class="bar">
+          <div id="peerAvatar" class="avatar" aria-hidden="true">…</div>
+          <div class="who">
+            <div id="peerName" class="name">Connecting…</div>
+            <div id="peerStatus" class="status"></div>
+          </div>
+          <div class="header-room-label"><span></span> PRIVATE CONVERSATION</div>
+          <button id="logoutBtn" class="icon" type="button" aria-label="Sign out" title="Sign out">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="m16 17 5-5-5-5M21 12H9"/></svg>
+            <span>Sign out</span>
+          </button>
+        </header>
+
+        <div id="banner" class="banner hidden" role="status"></div>
+        <div class="conversation-topline"><span>YOUR CONVERSATION</span><i></i></div>
+        <div id="messages" class="messages" aria-live="polite"></div>
+
+        <button id="toBottom" class="to-bottom hidden" type="button" aria-label="Jump to latest message">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          <span id="unreadCount" class="badge"></span>
+        </button>
+
+        <form id="composer" class="composer">
+          <div class="composer-shell">
+            <textarea id="input" rows="1" maxlength="4000" placeholder="Write something thoughtful…" aria-label="Message" enterkeyhint="send"></textarea>
+            <div class="composer-bottom">
+              <span class="composer-hint">ENTER TO SEND <i>·</i> SHIFT + ENTER FOR A NEW LINE</span>
+              <button id="sendBtn" class="send" type="submit" aria-label="Send" disabled>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12 20 4l-5.5 16-3-6-7.5-2Z"/><path d="m11.5 14 4-4"/></svg>
+              </button>
+            </div>
+          </div>
+        </form>
+      </main>
+    </div>
+  </section>
+
+  <div id="toast" class="toast" role="status"></div>
+  <script src="/app.js"></script>
+</body>
+</html>
